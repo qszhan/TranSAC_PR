@@ -38,16 +38,13 @@ print("TranSAC:", score)
 ## Pipeline of transferability estimation 
 ### Requirements
 
-* Install `PyTorch==1.7.1` and `torchvision==0.8.2` with `CUDA==10.1`:
+* Install `PyTorch==1.11.0` and `torchvision==0.12.0` with `CUDA==11.2`:
 ```bash
-conda install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=10.1 -c pytorch
+conda install pytorch==1.11.0 torchvision==0.12.0 cudatoolkit=11.2 -c pytorch
 ```
 
-* Install `timm==0.4.9`:
-```bash
-pip install timm==0.4.9
-```
 
+  - 
 ### Data Preparation
 
 * Download the downstream datasets to `./data/*`.
