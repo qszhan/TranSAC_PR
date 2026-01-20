@@ -1,6 +1,6 @@
 # TranSAC_PR
 
-This repo provides the implementation of "TranSAC, an unsupervised transferability metric based on domain commonality and task speciality" published in Pattern Recognition:
+This repo provides the implementation of "TranSAC: An Unsupervised Transferability Metric Based on Task Speciality and Domain Commonality" published in Pattern Recognition:
 
 
 ## Metrics
