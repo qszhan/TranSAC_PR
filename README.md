@@ -73,4 +73,8 @@ python cal_tar_probs_CNN.py -m resnet50 -d cifar10
 ```bash
 python evaluate_metric.py -me TranSAC  
 ```
+
+
+Acknowledgement
+
  
