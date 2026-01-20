@@ -74,7 +74,6 @@ python cal_tar_probs_CNN.py -m resnet50 -d cifar10
 python evaluate_metric.py -me TranSAC  
 ```
 
+## Acknowledgement
 
-Acknowledgement
-
- 
+This code is based on [SFDA (ECCV 2022)](https://github.com/TencentARC/SFDA/tree/main?tab=readme-ov-file#not-all-models-are-equal-predicting-model-transferability-in-a-self-challenging-fisher-space). We thank the authors for releasing their excellent work.
