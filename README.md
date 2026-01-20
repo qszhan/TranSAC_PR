@@ -13,7 +13,7 @@ $$
 - **p(Ẑ | T)**: soft predictions over K source classes
 
 
-## Usage in your code
+## Very Simple Usage in your project to evaluate transferability
 ```python
 import numpy as np
 from transac import compute_transac
