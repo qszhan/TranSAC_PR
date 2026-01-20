@@ -24,7 +24,7 @@ score = compute_transac(tar_prob, T, eps=10.0, order=5)
 print("TranSAC:", score)
 ```
 
-## Notes / Practical tips
+## Notes 
  
 
 * **eps**: choose a relatively large value (paper commonly uses `eps=10`) to help Taylor-series convergence.
@@ -32,3 +32,45 @@ print("TranSAC:", score)
 * **order**: small orders like `3` or `5` usually work well; higher orders cost more.
 
 * Complexity is driven mainly by the Taylor expansion over an `n x n` Gram matrix (roughly cubic in `n`).
+
+
+
+## Pipeline of transferability estimation 
+### Requirements
+
+* Install `PyTorch==1.7.1` and `torchvision==0.8.2` with `CUDA==10.1`:
+```bash
+conda install pytorch==1.7.1 torchvision==0.8.2 cudatoolkit=10.1 -c pytorch
+```
+
+* Install `timm==0.4.9`:
+```bash
+pip install timm==0.4.9
+```
+
+### Data Preparation
+
+* Download the downstream datasets to `./data/*`.
+
+
+
+* Fine-tune pretrained models with hyper-parameters sweep to obtain ground-truth transferability score
+```bash
+python finetune.py -m resnet50 -d cifar10
+```
+
+* Extract features of target data using pretrained models
+```bash
+python forward_feature.py -m resnet50 -d cifar10
+```
+
+* Extract features of softmax probabilities using pretrained models
+```bash
+python cal_tar_probs_CNN.py -m resnet50 -d cifar10
+```
+
+* Compute transferability scores using TranSAC
+```bash
+python evaluate_metric.py -me TranSAC  
+```
+ 
