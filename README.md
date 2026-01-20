@@ -1,16 +1,16 @@
 # TranSAC_PR
 
-This repo provides the implementation of "TranSAC: An Unsupervised Transferability Metric Based on Task Speciality and Domain Commonality" published in Pattern Recognition:
+This repo provides the implementation of "TranSAC: An Unsupervised Transferability Metric Based on Task Speciality and Domain Commonality" published in Pattern Recognition.
 
 
 ## Metrics
-\[
-\text{TranSAC} = H(T) - \frac{1}{K} H(\hat Z \mid T)
-\]
+
+$$
+\text{TranSAC} = H(T) - \frac{1}{K} H(\hat{Z} \mid T)
+$$
+
 - **T**: target representations (e.g., embeddings from a pretrained model)
-- **p(\hat Z \mid T)**: soft predictions over K source classes
-
-
+- **p(Ẑ | T)**: soft predictions over K source classes
 
 
 ## Usage in your code
