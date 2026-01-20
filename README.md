@@ -44,7 +44,6 @@ conda install pytorch==1.11.0 torchvision==0.12.0 cudatoolkit=11.2 -c pytorch
 ```
 
 
-  - 
 ### Data Preparation
 
 * Download the downstream datasets to `./data/*`.
